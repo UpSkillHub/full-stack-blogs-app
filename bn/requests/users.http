@@ -1,0 +1,61 @@
+GET http://localhost:5000/api/v1/users
+
+###
+GET http://localhost:5000/api/v1/users/677a9892941329e383472beb
+
+###
+POST http://localhost:5000/api/v1/users
+Content-Type: application/json
+
+{
+    "username": "jean",
+    "email": "jadongenda@gmail.com",
+    "password": "password"
+}
+
+###
+PUT http://localhost:5000/api/v1/users/677a9892941329e383472beb
+Content-Type: application/json
+
+{
+    "username": "updated_username",
+    "email": "updated_email@gmail.com",
+    "bio": "My updated bio",
+    "avatar": "https://example.com/avatar.jpg"
+}
+
+###
+DELETE http://localhost:5000/api/v1/users/677a9892941329e383472beb
+
+
+###
+POST http://localhost:5000/api/v1/auth/login
+Content-Type: application/json
+
+{
+    "email": "jadongenda@gmail.com", 
+    "password": "password"
+}
+
+###
+POST http://localhost:5000/api/v1/auth/register
+Content-Type: application/json
+
+{
+    "username": "newuser",
+    "email": "newuser@gmail.com",
+    "password": "password123"
+}
+
+###
+POST http://localhost:5000/api/v1/auth/logout
+Authorization: Bearer <your_token_here>
+
+###
+POST http://localhost:5000/api/v1/auth/reset-password
+Content-Type: application/json
+
+{
+    "email": "jadongenda@gmail.com"
+}
+

@@ -1,0 +1,27 @@
+GET http://localhost:5000/api/v1/posts
+
+
+###
+POST http://localhost:5000/api/v1/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3N2E5ODkyOTQxMzI5ZTM4MzQ3MmJlYiIsImlhdCI6MTczNjA4ODAwMywiZXhwIjoxNzM2MTc0NDAzfQ.-v6rKPLAJrpXrhe30km5zyct01wHfnTgvAQk15XNSvg
+
+{
+    "title": "Test Post",
+    "content": "This is a test post"
+}
+
+###
+GET http://localhost:5000/api/posts/669191919191919191919191
+
+###
+DELETE http://localhost:5000/api/posts/669191919191919191919191
+
+###
+PUT http://localhost:5000/api/posts/669191919191919191919191
+Content-Type: application/json
+
+{
+    "title": "Updated Test Post",
+    "content": "This is an updated test post"
+}
